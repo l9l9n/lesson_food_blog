@@ -44,6 +44,7 @@ class UserAdmin(admin.ModelAdmin):
         'id',
         'author',
         'title',
+        'short_text',
         # 'text',
         'created',
         'updated',
