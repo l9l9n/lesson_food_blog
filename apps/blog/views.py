@@ -31,11 +31,11 @@ class PostDetailView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        lastest_post = Post.objects.filter(is_draft=False)
-        if len(lastest_post) < 5:
-            context['lastest_post'] = lastest_post
+        latest_post = Post.objects.filter(is_draft=False)
+        if len(latest_post) < 5:
+            context['latest_post'] = latest_post
         else:
-            context['lastest_post'] = lastest_post[:5]
+            context['latest_post'] = latest_post[:5]
 
         context['categories'] = Category.objects.all()
 

@@ -62,4 +62,5 @@ class Post(models.Model):
 
     @property
     def short_text(self):
-        return truncatechars(self.text, 15)
+        """Возвращает в админку укарачивающий посты в данном случае 20 символов"""
+        return truncatechars(self.text, 20)
